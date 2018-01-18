@@ -1,0 +1,89 @@
+{
+    "name": "Erwan Leboucher",
+    "dateofbirth": "1998-06-05",
+    "picture": "",
+    "email": "erwan.leboucher@student.42.fr",
+    "phone": "+33678413420",
+    "website": "erwanleboucher.fr",
+    "summary": "",
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "erwan-leboucher",
+        "url": "https://www.linkedin.com/in/erwan-leboucher/",
+        "icon":"fa fa-linkedin"
+      },
+      {
+        "network": "Github",
+        "username": "genesixx",
+        "url": "https://github.com/genesixx",
+        "icon": "fa fa-github"
+      }
+    ],
+  "work": [],
+  "volunteer": [
+    {
+      "organization": "Lineage OS",
+      "position": "Device maintainer",
+      "website": "lineageos.org",
+      "startDate": "2015",
+      "endDate": "Present",
+      "summary": "Lineage OS is community-based project that aimed to create a replacement operating system on more than 100 smartphones and tablets, based on Android with features and options unavailable on Android versions distributed by manufactures on their devices."
+    }
+  ],
+  "education": [
+    {
+      "institution": "42 - Paris",
+      "area": "Computer Science",
+      "startDate": "2017",
+      "endDate": "2020"
+    },
+    {
+      "institution": "IUT Le Havre",
+      "area": "Computer Science",
+      "startDate": "2016",
+      "endDate": "2017"
+    },
+    {
+      "institution": "Lycée Saint Joseph Le Havre",
+      "area": "Baccalauréat Scientifique",
+      "startDate": "2009",
+      "endDate": "2016"
+    }
+  ],
+  "awards": [
+  {
+    "title": "Cambridge English First (FCE)",
+    "date": "2016",
+    "awarder": "Cambridge College",
+    "summary": ""
+  }
+  ],
+  "skills": [
+    {
+      "name": "C",
+      "level": "75",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "C1 Level"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Cars",
+      "keywords": []
+    }
+  ]
+}

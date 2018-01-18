@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  section(class="hero is-medium is-primary is-bold")
+    div(class="hero-body info")
+      div(class="container is-fluid")
+        h1(class="title") #{data.name}
+        -function calculateAge(birthday) {var ageDifMs = Date.now() - new Date(birthday).getTime(); var ageDate = new Date(ageDifMs); return Math.abs(ageDate.getUTCFullYear() - 1970);}
+        h2(class="subtitle") #{calculateAge(data.dateofbirth)} years
+        h2(class="subtitle") #{data.location.city} -  #{data.location.country}
+        h2(class="subtitle")
+          ul
+            each val in data.profiles
+              li
+                a(href=val.url) 
+                  i(class=val.icon)
+              
+  div(class="work")
+    ul 
+      each val in data.work
+        li 
+          h2
+            a(href=val.website) #{val.organization}
+          h3 #{val.position} · #{val.startDate} - #{val.endDate}
+          p #{val.summary}
+          
+  div(class="volunteer")
+    ul 
+      each val in data.volunteer
+        li 
+          h2
+            a(href=val.website) #{val.organization}
+          h3 #{val.position} · #{val.startDate} - #{val.endDate}
+          p #{val.summary}
+          
+  div(class="education")
+    ul 
+      each val in data.education
+        li 
+          h2 #{val.institution}
+          h3 #{val.area} · #{val.startDate} - #{val.endDate}
+          
+  div(class="skills")
+    ul 
+      each val in data.skills
+        li
+            span #{val.name}
+            progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
+            
+  div(class="languages")
+    ul 
+      each val in data.languages
+        li 
+          h2 #{val.language}
+          h3 #{val.fluency}
+          
+  div(class="interests")
+    ul 
+      each val in data.interests
+        li 
+          h3 #{val.name}
