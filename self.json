@@ -66,11 +66,44 @@
     "summary": ""
   }
   ],
-  "skills": [
+  "devskills": [
     {
       "name": "C",
-      "level": "75",
-      "keywords": []
+      "level": "75"
+    },
+    {
+      "name": "Java",
+      "level": "75"
+    },
+    {
+      "name": "HTML/CSS",
+      "level": "65"
+    },
+    {
+      "name": "Python",
+      "level": "65"
+    },
+    {
+      "name": "Javascript",
+      "level": "50"
+    }
+  ],
+  "toolskills": [
+    {
+      "name": "Linux",
+      "level": "100"
+    },
+    {
+      "name": "Vim",
+      "level": "75"
+    },
+    {
+      "name": "Node JS",
+      "level": "65"
+    },
+    {
+      "name": "Git",
+      "level": "75"
     }
   ],
   "languages": [
@@ -86,7 +119,7 @@
   "interests": [
     {
       "name": "Cars",
-      "keywords": []
+      "img": ""
     }
   ]
 }

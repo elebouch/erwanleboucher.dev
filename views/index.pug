@@ -2,37 +2,54 @@ extends layout
 
 block content
   div(class="columns")
-    div(class="column is-one-quarter")
+    div(class="column is-one-quarter left-side")
 
-      div(class="container is-fluid info has-text-centered")
+      div(class="container is-fluid info has-text-centered info")
         img(src="/images/profile.png")
         p(class="title") #{data.name}
         p(class="subtitle") #{data.title}
         -function calculateAge(birthday) {var ageDifMs = Date.now() - new Date(birthday).getTime(); var ageDate = new Date(ageDifMs); return Math.abs(ageDate.getUTCFullYear() - 1970);}
-        h2(class="subtitle") #{calculateAge(data.dateofbirth)} years old
-        h2(class="subtitle") #{data.location.city} -  #{data.location.country}
-                    
-      div(class=" languages")
-        p(class="title is-4") Language Skills
-        ul
-          each val in data.languages
-            li 
-              h2 #{val.language}
-              progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
-                                
-      div(class="skills")
-        ul 
-          each val in data.skills
-            li
-                span #{val.name}
-                progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
+        p(class="subtitle") #{calculateAge(data.dateofbirth)} years old
+        p(class="subtitle") #{data.location.city} -  #{data.location.country}
+        
+      div(class="container is-fluid")              
+        div(class="languages")
+          p(class="title is-4") Language Skills
+          ul
+            each val in data.languages
+              li 
+                h2 #{val.language}
+                progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
                 
-      h2(class="subtitle")
-        ul
-          each val in data.profiles
-            li
-              a(href=val.url) 
-                i(class=val.icon)
+      div(class="container is-fluid")                          
+        div(class="skills")
+          p(class="title is-4") Developer Skills
+          ul 
+            each val in data.devskills
+              li
+                  span #{val.name}
+                  progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
+                  
+      div(class="container is-fluid")
+        div(class="skills")
+          p(class="title is-4") Tool Skills
+          ul 
+            each val in data.toolskills
+              li
+                  span #{val.name}
+                  progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
+      div(class="container is-fluid")
+        div(class="skills")
+          p(class="title is-4") Other Skills
+          p Android, PHP, SQL, MacOS
+                  
+      div(class="container is-fluid") 
+        div(class="social")
+            ul
+              each val in data.profiles
+                li
+                  a(href=val.url) 
+                    i(class=val.icon)
                       
     div(class="column")
         div(class="container")

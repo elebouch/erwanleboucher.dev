@@ -1,6 +1,20 @@
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
 .info img{
-    height: 25%;
-    width: 25%;
+    height: 50%;
+    width: 50%;
+}
+.subtitle {
+  margin-top: -1.5rem;
+}
+.left-side .container{
+  margin-top: 1.5rem;
+}
+.info {
+  margin-bottom: 1.5rem !important;
 }
 
-@import "font-awesome/scss/font-awesome"
+$primary : #2291cd ;
+@import "font-awesome/scss/font-awesome";
+@import "bulma/sass/bulma.sass";
