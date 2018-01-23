@@ -1,13 +1,7 @@
 @charset "UTF-8";
-.subtitle {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important; }
-
-.subtitle li {
-  display: inline-block; }
-
-.subtitle li i {
-  padding: 10px; }
+.info img {
+  height: 25%;
+  width: 25%; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

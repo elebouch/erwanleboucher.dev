@@ -1,61 +1,73 @@
 extends layout
 
 block content
-  section(class="hero is-medium is-primary is-bold")
-    div(class="hero-body info")
-      div(class="container is-fluid")
-        h1(class="title") #{data.name}
+  div(class="columns")
+    div(class="column is-one-quarter")
+
+      div(class="container is-fluid info has-text-centered")
+        img(src="/images/profile.png")
+        p(class="title") #{data.name}
+        p(class="subtitle") #{data.title}
         -function calculateAge(birthday) {var ageDifMs = Date.now() - new Date(birthday).getTime(); var ageDate = new Date(ageDifMs); return Math.abs(ageDate.getUTCFullYear() - 1970);}
-        h2(class="subtitle") #{calculateAge(data.dateofbirth)} years
+        h2(class="subtitle") #{calculateAge(data.dateofbirth)} years old
         h2(class="subtitle") #{data.location.city} -  #{data.location.country}
-        h2(class="subtitle")
-          ul
-            each val in data.profiles
-              li
-                a(href=val.url) 
-                  i(class=val.icon)
+                    
+      div(class=" languages")
+        p(class="title is-4") Language Skills
+        ul
+          each val in data.languages
+            li 
+              h2 #{val.language}
+              progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
+                                
+      div(class="skills")
+        ul 
+          each val in data.skills
+            li
+                span #{val.name}
+                progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
+                
+      h2(class="subtitle")
+        ul
+          each val in data.profiles
+            li
+              a(href=val.url) 
+                i(class=val.icon)
+                      
+    div(class="column")
+        div(class="container")
+        div(class="tile is-vertical  is-ancestor")
+          div(class="tile is-parent is-vertical")
               
-  div(class="work")
-    ul 
-      each val in data.work
-        li 
-          h2
-            a(href=val.website) #{val.organization}
-          h3 #{val.position} · #{val.startDate} - #{val.endDate}
-          p #{val.summary}
-          
-  div(class="volunteer")
-    ul 
-      each val in data.volunteer
-        li 
-          h2
-            a(href=val.website) #{val.organization}
-          h3 #{val.position} · #{val.startDate} - #{val.endDate}
-          p #{val.summary}
-          
-  div(class="education")
-    ul 
-      each val in data.education
-        li 
-          h2 #{val.institution}
-          h3 #{val.area} · #{val.startDate} - #{val.endDate}
-          
-  div(class="skills")
-    ul 
-      each val in data.skills
-        li
-            span #{val.name}
-            progress(class="progress skill-bar-percent", value=val.level, max="100") #{val.level}
+            article(class="tile is-child box")     
+              p(class="title") Volunteer Experience
+              div(class="content volunteer")
+                
+                ul
+                  each val in data.volunteer
+                    #{val.startDate} - #{val.endDate}
+                    li 
+                      h2
+                        a(href=val.website) #{val.organization}
+                      h3 #{val.position} 
+                      p #{val.summary}
             
-  div(class="languages")
-    ul 
-      each val in data.languages
-        li 
-          h2 #{val.language}
-          h3 #{val.fluency}
+            article(class="tile is-child box")
+              p(class="title") Education
+              div(class="content education")
+                ul 
+                  each val in data.education
+                    #{val.date}
+                    li 
+                      h2 #{val.institution}
+                      h3 #{val.area}
+                      p #{val.summary}
+                    
+            
           
-  div(class="interests")
-    ul 
-      each val in data.interests
-        li 
-          h3 #{val.name}
+            article(class="tile is-child box")          
+              div(class="content interests")
+                ul 
+                  each val in data.interests
+                    li 
+                      h3 #{val.name}

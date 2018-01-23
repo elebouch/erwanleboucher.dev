@@ -1,5 +1,6 @@
 {
     "name": "Erwan Leboucher",
+    "title": "Full-Stack Developer",
     "dateofbirth": "1998-06-05",
     "picture": "",
     "email": "erwan.leboucher@student.42.fr",
@@ -30,29 +31,31 @@
       "organization": "Lineage OS",
       "position": "Device maintainer",
       "website": "lineageos.org",
-      "startDate": "2015",
-      "endDate": "Present",
+      "startDate": "2016",
+      "endDate": "Till now",
       "summary": "Lineage OS is community-based project that aimed to create a replacement operating system on more than 100 smartphones and tablets, based on Android with features and options unavailable on Android versions distributed by manufactures on their devices."
+    },
+    {
+      "organization": "XDA Developers",
+      "position": "Recognized Developer",
+      "website": "www.xda-developers.com",
+      "startDate": "2017",
+      "endDate": "Till now",
+      "summary": "XDA Developers is a mobile software development community of over 6.6 million members worldwide around Android "
     }
   ],
   "education": [
     {
       "institution": "42 - Paris",
       "area": "Computer Science",
-      "startDate": "2017",
-      "endDate": "2020"
-    },
-    {
-      "institution": "IUT Le Havre",
-      "area": "Computer Science",
-      "startDate": "2016",
-      "endDate": "2017"
+      "date": "Currently",
+      "summary": " 42 is a free french computer programming school created by Xavier Niel. The school does not have any professors The training is inspired by new modern ways to teach which include peer-to-peer pedagogy and project-based learning."
     },
     {
       "institution": "Lycée Saint Joseph Le Havre",
       "area": "Baccalauréat Scientifique",
-      "startDate": "2009",
-      "endDate": "2016"
+      "date": "2016",
+      "summary": "With third class honor (”Assez Bien”) and European English distinction"
     }
   ],
   "awards": [
@@ -72,12 +75,12 @@
   ],
   "languages": [
     {
-      "language": "French",
-      "fluency": "Native"
+      "language": "English",
+      "level": "75"
     },
     {
-      "language": "English",
-      "fluency": "C1 Level"
+      "language": "French",
+      "level": "100"
     }
   ],
   "interests": [
