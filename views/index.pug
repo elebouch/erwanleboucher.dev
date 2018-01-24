@@ -52,39 +52,39 @@ block content
                     i(class=val.icon)
                       
     div(class="column")
-        div(class="container")
-        div(class="tile is-vertical  is-ancestor")
-          div(class="tile is-parent is-vertical")
-              
-            article(class="tile is-child box")     
-              p(class="title") Volunteer Experience
-              div(class="content volunteer")
+        div(class="container right-side")
+          div(class="tile is-vertical  is-ancestor")
+            div(class="tile is-parent is-vertical")
                 
-                ul
-                  each val in data.volunteer
-                    #{val.startDate} - #{val.endDate}
-                    li 
-                      h2
-                        a(href=val.website) #{val.organization}
-                      h3 #{val.position} 
-                      p #{val.summary}
+              article(class="tile is-child box")     
+                p(class="title") Volunteer Experience
+                div(class="content volunteer")
+                  
+                  ul
+                    each val in data.volunteer
+                      #{val.startDate} - #{val.endDate}
+                      li 
+                        h2
+                          a(href=val.website) #{val.organization}
+                        h3 #{val.position} 
+                        p #{val.summary}
+              
+              article(class="tile is-child box")
+                p(class="title") Education
+                div(class="content education")
+                  ul 
+                    each val in data.education
+                      #{val.date}
+                      li 
+                        h2 #{val.institution}
+                        h3 #{val.area}
+                        p #{val.summary}
+                      
+              
             
-            article(class="tile is-child box")
-              p(class="title") Education
-              div(class="content education")
-                ul 
-                  each val in data.education
-                    #{val.date}
-                    li 
-                      h2 #{val.institution}
-                      h3 #{val.area}
-                      p #{val.summary}
-                    
-            
-          
-            article(class="tile is-child box")          
-              div(class="content interests")
-                ul 
-                  each val in data.interests
-                    li 
-                      h3 #{val.name}
+              article(class="tile is-child box")          
+                div(class="content interests")
+                  ul 
+                    each val in data.interests
+                      li 
+                        h3 #{val.name}

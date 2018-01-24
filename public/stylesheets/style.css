@@ -6,6 +6,15 @@
 .subtitle {
   margin-top: -1.5rem; }
 
+.title {
+  color: #464646 !important; }
+
+.left-side {
+  background-color: #efeeee; }
+
+article {
+  background-color: #efeeee; }
+
 .left-side .container {
   margin-top: 1.5rem; }
 
@@ -2421,7 +2430,7 @@ th {
   text-align: left; }
 
 html {
-  background-color: white;
+  background-color: #e3e3e3;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
