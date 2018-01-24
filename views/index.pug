@@ -6,7 +6,7 @@ block content
 
       div(class="container is-fluid info has-text-centered info")
         img(src="/images/profile.png")
-        p(class="title") #{data.name}
+        p(class="title name") #{data.name}
         p(class="subtitle") #{data.title}
         -function calculateAge(birthday) {var ageDifMs = Date.now() - new Date(birthday).getTime(); var ageDate = new Date(ageDifMs); return Math.abs(ageDate.getUTCFullYear() - 1970);}
         p(class="subtitle") #{calculateAge(data.dateofbirth)} years old
@@ -18,13 +18,13 @@ block content
           ul
             each val in data.languages
               li 
-                h2 #{val.language}
+                span #{val.language}
                 progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
                 
       div(class="container is-fluid")                          
         div(class="skills")
           p(class="title is-4") Developer Skills
-          ul 
+          ul
             each val in data.devskills
               li
                   span #{val.name}
@@ -38,6 +38,7 @@ block content
               li
                   span #{val.name}
                   progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
+                  
       div(class="container is-fluid")
         div(class="skills")
           p(class="title is-4") Other Skills
@@ -50,38 +51,62 @@ block content
                 li
                   a(href=val.url) 
                     i(class=val.icon)
-                      
+                    span  #{val.url}
+                    
     div(class="column")
         div(class="container right-side")
           div(class="tile is-vertical  is-ancestor")
             div(class="tile is-parent is-vertical")
-                
-              article(class="tile is-child box")     
+              
+              article(class="tile is-child box summary") 
+                  p(class="title") About me
+                  div(class="content")
+                    ul 
+                      li 
+                        p #{data.summary}
+                  
+              article(class="tile is-child box volunteer")     
                 p(class="title") Volunteer Experience
-                div(class="content volunteer")
+                div(class="content")
                   
                   ul
                     each val in data.volunteer
-                      #{val.startDate} - #{val.endDate}
-                      li 
-                        h2
-                          a(href=val.website) #{val.organization}
-                        h3 #{val.position} 
-                        p #{val.summary}
+                      div(class="columns")
+                         div(class="column")
+                           span(class="date") #{val.startDate} - #{val.endDate}
+                         div(class="column is-four-fifths")
+                            li 
+                              h2
+                                a(href=val.website) #{val.organization}
+                              h3 #{val.position} 
+                              p #{val.summary}
               
               article(class="tile is-child box")
                 p(class="title") Education
                 div(class="content education")
                   ul 
                     each val in data.education
-                      #{val.date}
-                      li 
-                        h2 #{val.institution}
-                        h3 #{val.area}
-                        p #{val.summary}
-                      
-              
-            
+                      div(class="columns")
+                         div(class="column")
+                           span(class="date") #{val.date}
+                         div(class="column is-four-fifths")
+                            li 
+                              h2 #{val.institution}
+                              h3 #{val.area}
+                              p #{val.summary}
+              article(class="tile is-child box")
+                p(class="title") Awards
+                div(class="content education")
+                  ul 
+                    each val in data.awards
+                      div(class="columns")
+                         div(class="column")
+                           span(class="date") #{val.date}
+                         div(class="column is-four-fifths")
+                            li 
+                              h2 #{val.title}
+                              p #{val.awarder}
+                                  
               article(class="tile is-child box")          
                 div(class="content interests")
                   ul 

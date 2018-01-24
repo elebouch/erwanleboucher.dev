@@ -7,19 +7,41 @@
   margin-top: -1.5rem; }
 
 .title {
+  font-family: "Abel", "Georgia", serif;
   color: #464646 !important; }
+
+.name {
+  font-family: "Raleway", "Abel"; }
 
 .left-side {
   background-color: #efeeee; }
 
-article {
-  background-color: #efeeee; }
+.box {
+  background-color: #efeeee !important; }
 
 .left-side .container {
   margin-top: 1.5rem; }
 
 .info {
   margin-bottom: 1.5rem !important; }
+
+.summary {
+  margin-top: 1.5rem !important; }
+
+.summary .content ul {
+  list-style: none; }
+
+.date {
+  float: left; }
+
+li {
+  color: #1e91ce; }
+
+li p {
+  color: #464646; }
+
+li span {
+  color: #464646; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2454,7 +2476,7 @@ button,
 input,
 select,
 textarea {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Roboto", "Georgia", serif; }
 
 code,
 pre {
@@ -8281,7 +8303,7 @@ label.panel-block {
     .tile.is-ancestor:not(:last-child) {
       margin-bottom: 0.75rem; }
   .tile.is-child {
-    margin: 0 !important; }
+    margin: 0; }
   .tile.is-parent {
     padding: 0.75rem; }
   .tile.is-vertical {

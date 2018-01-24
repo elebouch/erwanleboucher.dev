@@ -9,17 +9,26 @@
 .subtitle {
   margin-top: -1.5rem;
 }
+
 .title{
+  font-family: "Abel", "Georgia", serif;
   color : #464646 !important;
 }
+.name {
+  font-family: "Raleway", "Abel";
+}
+
+$family-serif: "Roboto", "Georgia", serif;
+
+$family-primary: $family-serif;
 
 $body-background-color:  #e3e3e3;
 
 .left-side {
   background-color: #efeeee;
 }
-article {
-  background-color: #efeeee;
+.box {
+  background-color: #efeeee !important;
 }
 .left-side .container{
   margin-top: 1.5rem;
@@ -28,6 +37,25 @@ article {
   margin-bottom: 1.5rem !important;
 }
 
-$primary : #2291cd ;
+.summary{
+  margin-top: 1.5rem !important;
+}
+.summary .content ul{
+  list-style: none;
+}
+.date {
+  float:left;
+}
+
+li {
+  color: #1e91ce;
+}
+li p {
+  color: #464646;
+}
+li span {
+  color: #464646;
+}
+$primary : #2291cd;
 @import "font-awesome/scss/font-awesome";
 @import "bulma/sass/bulma.sass";
