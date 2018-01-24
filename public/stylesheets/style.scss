@@ -1,28 +1,37 @@
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
 
-.info img{
-    height: 50%;
-    width: 50%;
-}
-
-.subtitle {
-  margin-top: -1.5rem;
-}
-
-.title{
-  font-family: "Abel", "Georgia", serif;
-  color : #464646 !important;
-}
-.name {
-  font-family: "Raleway", "Abel";
-}
+$primary : #2291cd;
 
 $family-serif: "Roboto", "Georgia", serif;
 
 $family-primary: $family-serif;
 
 $body-background-color:  #e3e3e3;
+
+.info img{
+    height: 50%;
+    width: 50%;
+}
+
+a {
+  color : #464646 !important;
+}
+a:hover {
+  color : $primary !important;
+}
+
+.subtitle {
+  margin-top: -1.5rem;
+}
+
+.title {
+  font-family: "Abel", "Georgia", serif;
+  color : #464646 !important;
+}
+.name {
+  font-family: "Raleway", "Abel" , serif;
+}
 
 .left-side {
   background-color: #efeeee;
@@ -40,22 +49,41 @@ $body-background-color:  #e3e3e3;
 .summary{
   margin-top: 1.5rem !important;
 }
-.summary .content ul{
+
+.summary .content ul li{
   list-style: none;
 }
+
 .date {
   float:left;
 }
 
+.content h3{
+  margin-top: 0rem!important;
+  margin-bottom: 0 !important;
+}
+
+i.fab {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #2291cd;
+  color: white;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 li {
-  color: #1e91ce;
+  color: #2291cd;
 }
 li p {
   color: #464646;
 }
+
 li span {
   color: #464646;
 }
-$primary : #2291cd;
-@import "font-awesome/scss/font-awesome";
+
+
 @import "bulma/sass/bulma.sass";

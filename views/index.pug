@@ -51,7 +51,7 @@ block content
                 li
                   a(href=val.url) 
                     i(class=val.icon)
-                    span  #{val.url}
+                  a(href=val.url) #{val.url}
                     
     div(class="column")
         div(class="container right-side")
@@ -65,10 +65,9 @@ block content
                       li 
                         p #{data.summary}
                   
-              article(class="tile is-child box volunteer")     
+              article(class="tile is-child box ")     
                 p(class="title") Volunteer Experience
-                div(class="content")
-                  
+                div(class="content volunteer")
                   ul
                     each val in data.volunteer
                       div(class="columns")
@@ -91,9 +90,11 @@ block content
                            span(class="date") #{val.date}
                          div(class="column is-four-fifths")
                             li 
-                              h2 #{val.institution}
+                              h2 
+                                a(href=val.link) #{val.institution}
                               h3 #{val.area}
                               p #{val.summary}
+                              
               article(class="tile is-child box")
                 p(class="title") Awards
                 div(class="content education")
@@ -107,9 +108,20 @@ block content
                               h2 #{val.title}
                               p #{val.awarder}
                                   
-              article(class="tile is-child box")          
-                div(class="content interests")
-                  ul 
-                    each val in data.interests
-                      li 
-                        h3 #{val.name}
+              article(class="tile is-child box") 
+                p(class="title") Interests        
+                div(class="content interests has-text-centered")
+                  div(class="columns")
+                    -var n = 0
+                    while n < 4
+                        div(class="column")
+                              img(src="/images/"+data.interests[n].img)
+                              p #{data.interests[n].name}
+                              -n++
+                  div(class="columns")
+                    -var n = 4
+                    while n < 8
+                        div(class="column")
+                              img(src="/images/"+data.interests[n].img)
+                              p #{data.interests[n].name}
+                              -n++

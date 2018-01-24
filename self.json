@@ -16,13 +16,13 @@
         "network": "LinkedIn",
         "username": "erwan-leboucher",
         "url": "https://www.linkedin.com/in/erwan-leboucher/",
-        "icon":"fa fa-linkedin"
+        "icon":"fab fa-linkedin"
       },
       {
         "network": "Github",
         "username": "genesixx",
         "url": "https://github.com/genesixx",
-        "icon": "fa fa-github"
+        "icon": "fab fa-github-alt"
       }
     ],
   "work": [],
@@ -30,7 +30,7 @@
     {
       "organization": "Lineage OS",
       "position": "Device maintainer",
-      "website": "lineageos.org",
+      "website": "https://lineageos.org",
       "startDate": "2016",
       "endDate": "Till now",
       "summary": "Lineage OS is community-based project that aimed to create a replacement operating system on more than 100 smartphones and tablets, based on Android with features and options unavailable on Android versions distributed by manufactures on their devices."
@@ -38,7 +38,7 @@
     {
       "organization": "XDA Developers",
       "position": "Recognized Developer",
-      "website": "www.xda-developers.com",
+      "website": "https://www.xda-developers.com",
       "startDate": "2017",
       "endDate": "Till now",
       "summary": "XDA Developers is a mobile software development community of over 6.6 million members worldwide around Android "
@@ -46,14 +46,16 @@
   ],
   "education": [
     {
-      "institution": "42 - Paris",
+      "institution": "École 42",
       "area": "Computer Science",
+      "link": "http://www.42.fr/",
       "date": "Currently",
       "summary": " 42 is a free french computer programming school created by Xavier Niel. The school does not have any professors The training is inspired by new modern ways to teach which include peer-to-peer pedagogy and project-based learning."
     },
     {
       "institution": "Lycée Saint Joseph Le Havre",
       "area": "Baccalauréat Scientifique",
+      "link": "https://www.st-jo.fr/",
       "date": "2016",
       "summary": "With third class honor (”Assez Bien”) and European English distinction"
     }
@@ -119,7 +121,35 @@
   "interests": [
     {
       "name": "Cars",
-      "img": ""
+      "img": "cars.png"
+    },
+    {
+      "name": "Technology",
+      "img": "bulb.png"
+    },
+    {
+      "name": "Engineering",
+      "img": "settings.png"
+    },
+    {
+      "name": "Science",
+      "img": "atom.png"
+    },
+    {
+      "name": "Sci Fi",
+      "img": "sci-fi.png"
+    },
+    {
+      "name": "Music",
+      "img": "Music.png"
+    },
+    {
+      "name": "Comics",
+      "img": "batman.png"
+    },
+    {
+      "name": "Coffee",
+      "img": "coffee.png"
     }
   ]
 }
