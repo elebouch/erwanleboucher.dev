@@ -1,5 +1,4 @@
 let express = require('express');
-let rp = require('request-promise');
 let router = express.Router();
 let fs = require('fs');
 
