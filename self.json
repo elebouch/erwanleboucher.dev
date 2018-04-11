@@ -151,5 +151,55 @@
       "name": "Coffee",
       "img": "coffee.png"
     }
+  ],
+  "projects" : [
+    { 
+      "name": "coalibot",
+      "link": "https://github.com/genesixx/coalibot",
+      "img" : null,
+      "desc" : "Slack Bot for 42 school",
+      "lang": "Javascript",
+      "topic": ["slack", "slackbot", "javascript", "nodejs", "express"]
+    },
+    { 
+      "name": "coalibot.fr",
+      "link": "https://github.com/genesixx/coalibot.fr",
+      "img" : "coalibot.fr.png",
+      "desc": "Stat from Coalibot",
+      "lang": "Javascript",
+      "topic": ["reactjs", "nodejs", "postgresql", "express"]
+    },
+    { 
+      "name": "erwanleboucher.fr",
+      "link": "https://github.com/genesixx/erwanleboucher.fr",
+      "img" : "erwanleboucher.fr.png",
+      "desc": "Resume website",
+      "lang": "Javascript",
+      "topic": ["pug", "nodejs", "portfolio", "express"]
+    },
+    { 
+      "name": "ft_ls",
+      "link": "https://github.com/genesixx/ft_ls",
+      "img" : null,    
+      "desc": "Recreating the Unix command ls, which lists all content from a folder",
+      "lang": "C",
+      "topic": ["C", "Unix", "42"] 
+    },
+    { 
+      "name": "minishell",
+      "link": "https://github.com/genesixx/minishell",
+      "img" : null,  
+      "desc": "Recreating a basic Unix shell.",
+      "lang": "C",
+      "topic": ["C", "Unix", "42"]  
+    },
+    {
+      "name": "minishop",
+      "link": "https://github.com/genesixx/minishop",
+      "img" : "minishop.png",      
+      "desc": "Creating a e-shop website during 48h for the piscine PHP of 42 school",
+      "lang": "PHP",
+      "topic": ["Php", "MySQL", "42"] 
+    }
   ]
 }

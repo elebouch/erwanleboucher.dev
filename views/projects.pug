@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    div(class="columns")
+        include leftpan
+                        
+        div(class="column")
+            div(class="container is-fluid right-side")                    
+                p(class="title is-2") Projects
+                div(class="tile is-vertical  is-ancestor")
+                    div(class="tile is-parent is-vertical")
+                    each val in data.projects
+                            div(class="box")
+                                article(class="media")
+                                    div(class="media-left")
+                                        figure(class="image is-128x128")
+                                            if val.img != null
+                                                a(href="/images/"+val.img)
+                                                    img(src="/images/"+val.img)
+                                            else 
+                                                img(src="/images/coding.png")
+                                    div(class="media-content")
+                                        p(style="float:right;") #{val.lang}
+                                        a(href=val.link)
+                                            p(class="title") #{val.name}
+                                        p(class="content") #{val.desc}
+                                        p Link: 
+                                            a(href=val.link) #{val.link}
+                                        div(class="field is-grouped is-grouped-multiline")
+                                            each topic in val.topic 
+                                                div(class="control")
+                                                    div(class="tags")
+                                                        span(class="tag is-primary") #{topic}
+                div
+                    p(class="title")
+                        a(href="/") To return to the index
+                                

@@ -2,126 +2,81 @@ extends layout
 
 block content
   div(class="columns")
-    div(class="column is-one-quarter left-side")
-
-      div(class="container is-fluid info has-text-centered info")
-        img(src="/images/profile.png")
-        p(class="title name") #{data.name}
-        p(class="subtitle") #{data.title}
-        -function calculateAge(birthday) {var ageDifMs = Date.now() - new Date(birthday).getTime(); var ageDate = new Date(ageDifMs); return Math.abs(ageDate.getUTCFullYear() - 1970);}
-        p(class="subtitle") #{calculateAge(data.dateofbirth)} years old
-        p(class="subtitle") #{data.location.city} -  #{data.location.country}
-        
-      div(class="container is-fluid")              
-        div(class="languages")
-          p(class="title is-4") Language Skills
-          ul
-            each val in data.languages
-              li 
-                span #{val.language}
-                progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
-                
-      div(class="container is-fluid")                          
-        div(class="skills")
-          p(class="title is-4") Developer Skills
-          ul
-            each val in data.devskills
-              li
-                  span #{val.name}
-                  progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
-                  
-      div(class="container is-fluid")
-        div(class="skills")
-          p(class="title is-4") Tool Skills
-          ul 
-            each val in data.toolskills
-              li
-                  span #{val.name}
-                  progress(class="progress is-primary", value=val.level, max="100") #{val.level}%
-                  
-      div(class="container is-fluid")
-        div(class="skills")
-          p(class="title is-4") Other Skills
-          p Android, PHP, SQL, MacOS
-                  
-      div(class="container is-fluid") 
-        div(class="social")
-            ul
-              each val in data.profiles
-                li
-                  a(href=val.url) 
-                    i(class=val.icon)
-                  a(href=val.url) #{val.username}
+    include leftpan
                     
     div(class="column")
-        div(class="container right-side")
-          div(class="tile is-vertical  is-ancestor")
-            div(class="tile is-parent is-vertical")
-              
-              article(class="tile is-child box summary") 
-                  p(class="title") About me
-                  div(class="content")
-                    ul 
-                      li 
-                        p #{data.summary}
-                  
-              article(class="tile is-child box ")     
-                p(class="title") Volunteer Experience
-                div(class="content volunteer")
-                  ul
-                    each val in data.volunteer
-                      div(class="columns")
-                         div(class="column")
-                           span(class="date") #{val.startDate} - #{val.endDate}
-                         div(class="column is-four-fifths")
-                            li 
-                              h2
-                                a(href=val.website) #{val.organization}
-                              h3 #{val.position} 
-                              p #{val.summary}
-              
-              article(class="tile is-child box")
-                p(class="title") Education
-                div(class="content education")
+     
+      div(class="container is-fluid right-side")
+
+        div(class="tile is-vertical  is-ancestor")
+          div(class="tile is-parent is-vertical")
+            div
+              p(style="float:right;", class="title")
+                a(href="/projects") To see my projects
+            article(class="tile is-child box summary") 
+                p(class="title") About me
+                div(class="content")
                   ul 
-                    each val in data.education
-                      div(class="columns")
-                         div(class="column")
-                           span(class="date") #{val.date}
-                         div(class="column is-four-fifths")
-                            li 
-                              h2 
-                                a(href=val.link) #{val.institution}
-                              h3 #{val.area}
-                              p #{val.summary}
-                              
-              article(class="tile is-child box")
-                p(class="title") Awards
-                div(class="content education")
-                  ul 
-                    each val in data.awards
-                      div(class="columns")
-                         div(class="column")
-                           span(class="date") #{val.date}
-                         div(class="column is-four-fifths")
-                            li 
-                              h2 #{val.title}
-                              p #{val.awarder}
-                                  
-              article(class="tile is-child box") 
-                p(class="title") Interests        
-                div(class="content interests has-text-centered")
-                  div(class="columns")
-                    -var n = 0
-                    while n < 4
+                    li 
+                      p #{data.summary}
+                
+            article(class="tile is-child box ")     
+              p(class="title") Volunteer Experience
+              div(class="content volunteer")
+                ul
+                  each val in data.volunteer
+                    div(class="columns")
                         div(class="column")
-                              img(src="/images/"+data.interests[n].img)
-                              p #{data.interests[n].name}
-                              -n++
-                  div(class="columns")
-                    -var n = 4
-                    while n < 8
+                          span(class="date") #{val.startDate} - #{val.endDate}
+                        div(class="column is-four-fifths")
+                          li 
+                            h2
+                              a(href=val.website) #{val.organization}
+                            h3 #{val.position} 
+                            p #{val.summary}
+            
+            article(class="tile is-child box")
+              p(class="title") Education
+              div(class="content education")
+                ul 
+                  each val in data.education
+                    div(class="columns")
                         div(class="column")
-                              img(src="/images/"+data.interests[n].img)
-                              p #{data.interests[n].name}
-                              -n++
+                          span(class="date") #{val.date}
+                        div(class="column is-four-fifths")
+                          li 
+                            h2 
+                              a(href=val.link) #{val.institution}
+                            h3 #{val.area}
+                            p #{val.summary}
+                            
+            article(class="tile is-child box")
+              p(class="title") Awards
+              div(class="content education")
+                ul 
+                  each val in data.awards
+                    div(class="columns")
+                        div(class="column")
+                          span(class="date") #{val.date}
+                        div(class="column is-four-fifths")
+                          li 
+                            h2 #{val.title}
+                            p #{val.awarder}
+                                
+            article(class="tile is-child box") 
+              p(class="title") Interests        
+              div(class="content interests has-text-centered")
+                div(class="columns")
+                  -var n = 0
+                  while n < 4
+                      div(class="column")
+                            img(src="/images/"+data.interests[n].img)
+                            p #{data.interests[n].name}
+                            -n++
+                div(class="columns")
+                  -var n = 4
+                  while n < 8
+                      div(class="column")
+                            img(src="/images/"+data.interests[n].img)
+                            p #{data.interests[n].name}
+                            -n++
